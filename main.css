@@ -32,9 +32,10 @@
     grid-template-areas: 
         "q q q q q h h h h h h h"
         "b b b b e e e e a a a a"
-        "b b b b e e e e a a a a"
+        "b b b b g g g g a a a a"
         "f f f f f f f f f f f f";
 }
+
 li{
     font-weight: 500;
     padding:10px;
@@ -108,32 +109,42 @@ li{
         "b"
         "a"
         "e"
-        "f";
+        "f"
+        "g";
     }
 }
 
 /* step 1 - assign each of your sections a letter */
 blockquote {
-    grid-area: q;
+    grid-area: h;
     font-weight:300;
-    padding-bottom:30px;
-    margin-top: 2in;
+    padding-top:40px;
+    /* margin-top: 2in; */
+    text-align: left;
 }
 
-header {
+
+.header {
     grid-area: h;
-    padding-top: 4px;
+    /* padding-left:100px; */
 }
 
 .about-me {
     font-family: 'Playfair Display';
     font-weight: 700;
     color: rgb(119, 102, 33);
-
+    grid-area: a;
 }
 
 .awards {
-    grid-area: b;
+    grid-area: g;
+    padding-top: 0px;
+    
+}
+
+.proficiencies {
+    grid-area: a;
+    
 }
 
 .education {
@@ -143,7 +154,7 @@ header {
 }
 
 .experience {
-    grid-area: a;
+    grid-area: b;
     font-weight:300;
 }
 
@@ -152,4 +163,3 @@ header {
 footer{
     grid-area: f;
 }
-
