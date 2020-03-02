@@ -1,0 +1,165 @@
+*{
+    /* outline: 2px dashed green; */
+    margin: 0;
+    padding:0;
+}
+/* @media screen and (max-width: 600px) {
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "q"
+        "h"
+        "e"
+        "b"
+        "f";
+}
+ */
+/* step one - build your grid */
+.container {
+    padding:10%;
+    /* height: 100%; */
+    display: grid;
+    grid-gap: 25px;
+    /* this will be  the same for everyone */
+    grid-template-columns: repeat(12, 1fr);
+    /* this will be customized, based on your grid, use pixels or % */
+    grid-template-rows: auto;
+    /* use letters from step 2 to build the grid */
+    grid-template-areas: 
+        "q q q q q h h h h h h h"
+        "b b b b e e e e a a a a"
+        "b b b b g g g g a a a a"
+        "f f f f f f f f f f f f";
+}
+
+li{
+    font-weight: 500;
+    padding:10px;
+}
+
+.date{
+    font-weight: 200;
+    font-size:.75em;
+}
+body{
+    font-size: 1.5em;
+    font-family: 'Source Sans Pro';
+}
+
+ul{
+    list-style: none;
+}
+/* ul list-style: none takes away all the bullets */
+
+
+h1{
+    font-size: 2em;
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    color: rgb(212, 96, 58);
+}
+
+h2{
+    padding-top:25px;
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    color: rgb(119, 102, 33);
+}
+
+h3{
+    font-size: 35px;
+    font-family: 'Source Sans Pro';
+    font-weight: 300;
+}
+h3{
+    padding-top:45px;
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-size: 1em;
+}
+
+h4{
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-size: large;
+    color: rgb(115, 135, 160)
+}
+
+li{
+    font-family: 'Source Sans Pro';
+    font-weight: 300
+}
+/* step three - build a grid that becomes active when the pixels are 800px or less */
+@media screen and (max-width: 800px) {
+
+    .container{
+        display: grid;
+        grid-gap: 15px;
+        /* grid is only one column, keep this way */
+        grid-template-columns: 1fr;
+        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-template-rows: auto;
+        grid-template-areas:
+        "h"
+        "q"
+        "b"
+        "a"
+        "e"
+        "f"
+        "g";
+    }
+}
+
+/* step 1 - assign each of your sections a letter */
+blockquote {
+    grid-area: h;
+    font-weight:300;
+    padding-top:40px;
+    /* margin-top: 2in; */
+    text-align: left;
+}
+
+
+.header {
+    grid-area: h;
+    /* padding-left:100px; */
+}
+
+.about-me {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    color: rgb(119, 102, 33);
+    grid-area: a;
+}
+
+.awards {
+    grid-area: g;
+    padding-top: 0px;
+    
+}
+
+.proficiencies {
+    grid-area: a;
+    
+}
+
+.education {
+    grid-area: e;
+    font-weight:300;
+
+}
+
+.experience {
+    grid-area: b;
+    font-weight:300;
+}
+
+
+
+footer{
+    grid-area: f;
+}
